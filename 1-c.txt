@@ -1,0 +1,13 @@
+import numpy as np
+arr=np.array([1,2,3,4,5])
+max_element=np.max(arr)
+min_element=np.min(arr)
+print("max_element",max_element)
+
+print("min_element",min_element)
+sum=0
+for i in range (0,len(arr)):
+    sum+=arr[i]
+print(sum)
+cs=np.cumsum(arr)
+print(cs)

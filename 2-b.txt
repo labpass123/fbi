@@ -1,0 +1,4 @@
+import numpy as np
+mtrx=np.array([[1,2],[3,4]])
+ev=np.linalg.eigvals(mtrx)
+print(ev)

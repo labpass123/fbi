@@ -1,0 +1,12 @@
+import numpy as np
+a=np.array([2,6])
+b=np.array([3,10])
+print("vectors")
+print("a",a)
+print("\n b=",b)
+print("inner =")
+print(np.inner(a,b))
+print("outer =")
+print(np.outer(a,b))
+print("cross =")
+print(np.cross(a,b))
