@@ -1,42 +1,36 @@
-#3-c: Perform Sorting, Searching and Counting using Numpy methods.
-
-# importing libraries
 import numpy as np
- 
-# sort along the first axis
+
+# Sorting
+# Sort along the first axis
 a = np.array([[12, 15], [10, 1]])
-arr1 = np.sort(a, axis = 0)        
-print ("Along first axis : \n", arr1)        
- 
-# sort along the last axis
+sorted_first_axis = np.sort(a, axis=0)
+print("Sorted along first axis:\n", sorted_first_axis)
+
+# Sort along the last axis
 a = np.array([[10, 15], [12, 1]])
-arr2 = np.sort(a, axis = -1)        
-print ("\nAlong first axis : \n", arr2)
- 
+sorted_last_axis = np.sort(a, axis=-1)
+print("\nSorted along last axis:\n", sorted_last_axis)
+
+# Sort along none axis (flattened)
 a = np.array([[12, 15], [10, 1]])
-arr1 = np.sort(a, axis = None)        
-print ("\nAlong none axis : \n", arr1)
+sorted_none_axis = np.sort(a, axis=None)
+print("\nSorted along none axis (flattened):\n", sorted_none_axis)
 
-
-#Searching
-import numpy as np
+# Searching
 array = np.arange(12).reshape(3, 4)
-print("Input ARRAY : \n", array)
- 
-# No axis mentioned, so works on entire array
-print("\nMax element : ", np.argmax(array))
- 
-# returning Indices of the max element as per the indices
-print(("\nIndices of Max element : ", np.argmax(array, axis=0)))
-print(("\nIndices of Max element : ", np.argmax(array, axis=1)))
+print("\nInput ARRAY:\n", array)
 
+# Maximum element without specifying axis
+print("\nMax element:", np.max(array))
 
-#Counting
-import numpy as np
-  
-# Counting a number of non-zero values
-a = np.count_nonzero([[0,1,7,0,0],[3,0,0,2,19]])
-b = np.count_nonzero(([[0,1,7,0,0],[3,0,0,0,19]]))
- 
-print("Number of nonzero values is :",a)
-print("Number of nonzero values is :",b)
+# Indices of the max element along axis 0 and axis 1
+print("Indices of Max element along axis 0:", np.argmax(array, axis=0))
+print("Indices of Max element along axis 1:", np.argmax(array, axis=1))
+
+# Counting
+# Counting the number of non-zero values
+a = np.count_nonzero([[0, 1, 7, 0, 0], [3, 0, 0, 2, 19]])
+b = np.count_nonzero([[0, 1, 7, 0, 0], [3, 0, 0, 0, 19]])
+
+print("\nNumber of nonzero values (a):", a)
+print("Number of nonzero values (b):", b)
