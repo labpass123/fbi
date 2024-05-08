@@ -1,3 +1,4 @@
+#5-c: Write a program that demonstrates the row selection, row addition, and row deletion.
 import pandas as pd
 
 # Row Selection
